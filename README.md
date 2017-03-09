@@ -1,2 +1,4 @@
-# bi-repo
-A developmental repository of CPI Business Intelligence.
+#CPI Business Intelligence
+
+
+An online repository for BI development files.
