@@ -1,0 +1,1 @@
+C:\Oracle\Middleware\Oracle_Home\user_projects\domains\bi\bidata\service_instances\ssi\metadata\datamodel\customizations

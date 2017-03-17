@@ -792,7 +792,7 @@
 <XSDSchema></XSDSchema>
 </PhysicalTable>
 
-<PhysicalTable name="D2 Chart of Accounts" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:1778" uid="00000000-118c-1629-8029-c0a801020000" type="none" pollFreq="0" rowCount="3246.0" lastUpdated="2017-03-02 16:55:39" maxConn="0">
+<PhysicalTable name="D2 Chart of Accounts" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:1778" uid="00000000-118c-1629-8029-c0a801020000" type="none" pollFreq="0" rowCount="3246.0" lastUpdated="2017-03-17 10:02:04" maxConn="0">
 <SourceTable>
 <RefPhysicalTable id="3001:862" uid="c00000a6-0e47-1629-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_CHART_OF_ACCTS_DIM&quot;"/>
 </SourceTable>
@@ -994,6 +994,14 @@
 <XSDSchema></XSDSchema>
 </PhysicalTable>
 
+<PhysicalTable name="F3 OR Fact" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:4176" uid="80000000-4911-1630-8029-c0a801020000" type="none" pollFreq="0" rowCount="689756.0" lastUpdated="2017-03-09 17:45:31" maxConn="0">
+<SourceTable>
+<RefPhysicalTable id="3001:4161" uid="40000000-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;"/>
+</SourceTable>
+<XSLT></XSLT>
+<XSDSchema></XSDSchema>
+</PhysicalTable>
+
 <PhysicalTable name="SAMP_OFFICES_D" parentName="&quot;Sample App Lite Data&quot;..&quot;&quot;" parentId="3023:2" parentUid="80ca62c4-0bcf-0000-714b-e31d00000000" id="3001:6" uid="80ca64f8-0bb9-0000-714b-e31d00000000" type="none" x="298" y="638" rowCount="0.0" uri="VALUEOF(NQ_SESSION.SERVICEINSTANCEROOT)/data/SAMP_OFFICES_D.xml" maxConn="0">
 <Description><![CDATA[OFFICES Dimension Physical table. This table is not directly used by the logical model, it is accessed via the aliases setup in the physical diagram. The database is of XML type, the setup of this physical table leverages the value of an RPD variable : NQ_SESSION.SERVICEINSTANCEROOT (see the XML tab in this dialog box).]]></Description>
 <XSLT></XSLT>
@@ -1060,7 +1068,7 @@
 <XSDSchema></XSDSchema>
 </PhysicalTable>
 
-<PhysicalTable name="BI_CHART_OF_ACCTS_DIM" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:862" uid="c00000a6-0e47-1629-8029-c0a801020000" type="none" rowCount="3246.0" lastUpdated="2017-03-02 16:55:39" maxConn="0">
+<PhysicalTable name="BI_CHART_OF_ACCTS_DIM" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:862" uid="c00000a6-0e47-1629-8029-c0a801020000" type="none" rowCount="3246.0" lastUpdated="2017-03-17 10:02:04" maxConn="0">
 <XSLT></XSLT>
 <XSDSchema></XSDSchema>
 </PhysicalTable>
@@ -1105,14 +1113,6 @@
 </PhysicalTable>
 
 <PhysicalTable name="BI_COMM_INV_HIST_FACT" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:997" uid="c000012d-0e47-1629-8029-c0a801020000" type="none" rowCount="0.0" lastUpdated="2017-02-15 20:06:10" maxConn="0">
-<XSLT></XSLT>
-<XSDSchema></XSDSchema>
-</PhysicalTable>
-
-<PhysicalTable name="F3 OR Fact" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;" parentId="3027:647" parentUid="80000000-0e47-1629-8029-c0a801020000" id="3001:4176" uid="80000000-4911-1630-8029-c0a801020000" type="none" pollFreq="0" rowCount="689756.0" lastUpdated="2017-03-09 17:45:31" maxConn="0">
-<SourceTable>
-<RefPhysicalTable id="3001:4161" uid="40000000-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;"/>
-</SourceTable>
 <XSLT></XSLT>
 <XSDSchema></XSDSchema>
 </PhysicalTable>
@@ -5233,6 +5233,90 @@
 <PhysicalColumn name="TRAN_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;" parentId="3001:4161" parentUid="40000000-4906-1630-8029-c0a801020000" id="3003:4175" uid="4000000e-4906-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" specialType="none">
 </PhysicalColumn>
 
+<PhysicalColumn name="ADDRESS" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4177" uid="80000001-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="750" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4162" uid="40000001-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;ADDRESS&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="AGENT_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4178" uid="80000002-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4163" uid="40000002-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;AGENT_KEY&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="BRANCH_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4179" uid="80000003-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4164" uid="40000003-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;BRANCH_KEY&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="CANCEL_DATE" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4180" uid="80000004-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4165" uid="40000004-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;CANCEL_DATE&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="CANCEL_DCB_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4181" uid="80000005-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4166" uid="40000005-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;CANCEL_DCB_NO&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="DCB_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4182" uid="80000006-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4167" uid="40000006-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;DCB_NO&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="DCB_USERS_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4183" uid="80000007-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="22" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4168" uid="40000007-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;DCB_USERS_KEY&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="OR_DATE" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4184" uid="80000008-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4169" uid="40000008-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_DATE&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="OR_FLAG" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4185" uid="80000009-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="5" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4170" uid="40000009-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_FLAG&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="OR_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4186" uid="8000000a-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="22" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4171" uid="4000000a-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_KEY&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="OR_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4187" uid="8000000b-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="75" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4172" uid="4000000b-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_NO&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="PARTICULARS" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4188" uid="8000000c-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2500" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4173" uid="4000000c-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;PARTICULARS&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="PAYOR" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4189" uid="8000000d-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2750" nullable="true" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4174" uid="4000000d-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;PAYOR&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
+<PhysicalColumn name="TRAN_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4190" uid="8000000e-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" specialType="none">
+<SourceColumn>
+<RefPhysicalColumn id="3003:4175" uid="4000000e-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;TRAN_KEY&quot;"/>
+</SourceColumn>
+</PhysicalColumn>
+
 <PhysicalColumn name="Days_in_Mth" parentName="&quot;Sample App Lite Data&quot;...&quot;D02 Time Month Grain&quot;" parentId="3001:18" parentUid="80ca65a8-0bb9-0000-714b-e31d00000000" id="3003:42" uid="80ca65b0-0bbb-0000-714b-e31d00000000" dataType="INT" extName="//Table/SAMP_TIME_MTH_D/Days_in_Mth" rowCount="0.0" specialType="none">
 <SourceColumn>
 <RefPhysicalColumn id="3003:152" uid="80ca6577-0bbb-0000-714b-e31d00000000" qualifiedName="&quot;Sample App Lite Data&quot;...&quot;SAMP_TIME_MTH_D&quot;.&quot;Days_in_Mth&quot;"/>
@@ -6448,90 +6532,6 @@
 <PhysicalColumn name="BRANCH_CD" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_COMM_INV_HIST_FACT&quot;" parentId="3001:997" parentUid="c000012d-0e47-1629-8029-c0a801020000" id="3003:999" uid="c000012f-0e47-1629-8029-c0a801020000" dataType="VARCHAR" precision="2" specialType="none">
 </PhysicalColumn>
 
-<PhysicalColumn name="ADDRESS" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4177" uid="80000001-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="750" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4162" uid="40000001-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;ADDRESS&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="AGENT_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4178" uid="80000002-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4163" uid="40000002-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;AGENT_KEY&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="BRANCH_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4179" uid="80000003-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4164" uid="40000003-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;BRANCH_KEY&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="CANCEL_DATE" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4180" uid="80000004-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4165" uid="40000004-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;CANCEL_DATE&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="CANCEL_DCB_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4181" uid="80000005-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4166" uid="40000005-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;CANCEL_DCB_NO&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="DCB_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4182" uid="80000006-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="200" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4167" uid="40000006-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;DCB_NO&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="DCB_USERS_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4183" uid="80000007-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="22" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4168" uid="40000007-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;DCB_USERS_KEY&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="OR_DATE" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4184" uid="80000008-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4169" uid="40000008-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_DATE&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="OR_FLAG" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4185" uid="80000009-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="5" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4170" uid="40000009-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_FLAG&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="OR_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4186" uid="8000000a-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="22" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4171" uid="4000000a-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_KEY&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="OR_NO" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4187" uid="8000000b-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="75" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4172" uid="4000000b-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;OR_NO&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="PARTICULARS" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4188" uid="8000000c-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2500" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4173" uid="4000000c-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;PARTICULARS&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="PAYOR" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4189" uid="8000000d-4911-1630-8029-c0a801020000" dataType="VARCHAR" precision="2750" nullable="true" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4174" uid="4000000d-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;PAYOR&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
-<PhysicalColumn name="TRAN_KEY" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;F3 OR Fact&quot;" parentId="3001:4176" parentUid="80000000-4911-1630-8029-c0a801020000" id="3003:4190" uid="8000000e-4911-1630-8029-c0a801020000" dataType="DOUBLE" precision="12" specialType="none">
-<SourceColumn>
-<RefPhysicalColumn id="3003:4175" uid="4000000e-4906-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_OR_FACT&quot;.&quot;TRAN_KEY&quot;"/>
-</SourceColumn>
-</PhysicalColumn>
-
 <PhysicalKey name="SYS_C0030079" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_COMM_INV_HIST_FACT&quot;" parentId="3001:997" parentUid="c000012d-0e47-1629-8029-c0a801020000" id="3008:1025" uid="c0000149-0e47-1629-8029-c0a801020000">
 <Columns>
 <RefPhysicalColumn id="3003:1018" uid="c0000142-0e47-1629-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_COMM_INV_HIST_FACT&quot;.&quot;RI_COMM_HIST_KEY&quot;"/>
@@ -6947,6 +6947,12 @@
 </Columns>
 </PhysicalKey>
 
+<PhysicalKey name="D17 Agent Dim_Key" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;D17 Agent Dim&quot;" parentId="3001:4060" parentUid="40000000-4889-1630-8029-c0a801020000" id="3008:4195" uid="00000000-491e-1630-8029-c0a801020000">
+<Columns>
+<RefPhysicalColumn id="3003:4062" uid="40000002-4889-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;D17 Agent Dim&quot;.&quot;AGENT_KEY&quot;"/>
+</Columns>
+</PhysicalKey>
+
 <PhysicalKey name="SYS_C0030098" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_ACCT_BRANCH_DIM&quot;" parentId="3001:648" parentUid="80000001-0e47-1629-8029-c0a801020000" id="3008:655" uid="80000008-0e47-1629-8029-c0a801020000">
 <Columns>
 <RefPhysicalColumn id="3003:651" uid="80000004-0e47-1629-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_ACCT_BRANCH_DIM&quot;.&quot;BRANCH_KEY&quot;"/>
@@ -7040,12 +7046,6 @@
 <PhysicalKey name="SYS_C0030088" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_COLLECTION_DTL_FACT&quot;" parentId="3001:978" parentUid="c000011a-0e47-1629-8029-c0a801020000" id="3008:996" uid="c000012c-0e47-1629-8029-c0a801020000">
 <Columns>
 <RefPhysicalColumn id="3003:985" uid="c0000121-0e47-1629-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;BI_COLLECTION_DTL_FACT&quot;.&quot;COL_DTL_KEY&quot;"/>
-</Columns>
-</PhysicalKey>
-
-<PhysicalKey name="D17 Agent Dim_Key" parentName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;D17 Agent Dim&quot;" parentId="3001:4060" parentUid="40000000-4889-1630-8029-c0a801020000" id="3008:4195" uid="00000000-491e-1630-8029-c0a801020000">
-<Columns>
-<RefPhysicalColumn id="3003:4062" uid="40000002-4889-1630-8029-c0a801020000" qualifiedName="&quot;Business Intelligence Data&quot;..&quot;BIADMIN&quot;.&quot;D17 Agent Dim&quot;.&quot;AGENT_KEY&quot;"/>
 </Columns>
 </PhysicalKey>
 
@@ -16080,6 +16080,38 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:217" uid="80cb680f-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D1 Products&quot;.&quot;Brand Key&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Quarter No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4360" uid="40000009-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3378" uid="00000063-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Quarter No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Time Code" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4361" uid="4000000a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3379" uid="00000064-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Time Code&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Week No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4362" uid="4000000b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3380" uid="00000065-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Week No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Year No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4363" uid="4000000c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3381" uid="00000066-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Year No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Calendar Date" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4364" uid="4000000d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3374" uid="0000005f-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Calendar Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Date Of Month" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4365" uid="4000000e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3375" uid="00000060-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Date Of Month&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Month Name" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4366" uid="4000000f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3376" uid="00000061-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Month Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Month No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4367" uid="40000010-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3377" uid="00000062-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Month No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Order Number" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders&quot;" parentId="4008:365" parentUid="80cb6a73-0fa8-0000-714b-e31d00000000" id="4010:437" uid="80cb6d10-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Returns the Oder Number from the Revenue Facts table]]></Description>
 <RefLogicalColumn id="2006:220" uid="80cb6875-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order Number&quot;"/>
@@ -16110,9 +16142,89 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:227" uid="80cb687a-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order Size Bin&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Lic Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4420" uid="40000045-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4230" uid="8000001f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Lic Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Mail Addr1" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4421" uid="40000046-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4231" uid="80000020-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr1&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Mail Addr2" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4422" uid="40000047-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4232" uid="80000021-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr2&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Mail Addr3" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4423" uid="40000048-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4233" uid="80000022-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr3&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Master Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4424" uid="40000049-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4234" uid="80000023-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Master Intm No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Nickname" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4425" uid="4000004a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4235" uid="80000024-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Nickname&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Old Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4426" uid="4000004b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4236" uid="80000025-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Old Intm No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Parent Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4427" uid="4000004c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4237" uid="80000026-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Parent Intm No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Payt Terms" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4428" uid="4000004d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4238" uid="80000027-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Payt Terms&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Phone No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4429" uid="4000004e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4239" uid="80000028-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Phone No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Order to Bill Days" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders&quot;" parentId="4008:365" parentUid="80cb6a73-0fa8-0000-714b-e31d00000000" id="4010:443" uid="80cb6d18-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[This is a logical calculation object that computes for ech order, the number of days between order date and bill date.]]></Description>
 <RefLogicalColumn id="2006:229" uid="80cb687b-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order to Bill Days&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Pin Code" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4430" uid="4000004f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4240" uid="80000029-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Pin Code&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Prnt Intm Tin Sw" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4431" uid="40000050-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4241" uid="8000002a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Prnt Intm Tin Sw&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Ref Intm Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4432" uid="40000051-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4242" uid="8000002b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ref Intm Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4433" uid="40000052-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4243" uid="8000002c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Remarks&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Smart No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4434" uid="40000053-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4244" uid="8000002d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Smart No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Special Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4435" uid="40000054-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4245" uid="8000002e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Special Rate&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Sun No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4436" uid="40000055-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4246" uid="8000002f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Sun No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tin" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4437" uid="40000056-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4247" uid="80000030-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Tin&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4438" uid="40000057-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4248" uid="80000031-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;User Id&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Whtax Id" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4439" uid="40000058-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4249" uid="80000032-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Whtax Id&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Order to Bill Days Bin" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders&quot;" parentId="4008:365" parentUid="80cb6a73-0fa8-0000-714b-e31d00000000" id="4010:444" uid="80cb6d1a-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16120,14 +16232,134 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:231" uid="80cb687c-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order to Bill Days Bin&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Wtax Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4440" uid="40000059-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4250" uid="80000033-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Wtax Rate&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Active Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4441" uid="4000005a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4201" uid="80000002-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Active Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Agent Key" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4442" uid="4000005b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4202" uid="80000003-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Agent Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Bill Addr1" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4443" uid="4000005c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4203" uid="80000004-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr1&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Bill Addr2" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4444" uid="4000005d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4204" uid="80000005-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr2&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Bill Addr3" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4445" uid="4000005e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4205" uid="80000006-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr3&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Birthdate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4446" uid="4000005f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4206" uid="80000007-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Birthdate&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Ca Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4447" uid="40000060-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4207" uid="80000008-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ca Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Ca No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4448" uid="40000061-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4208" uid="80000009-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ca No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Co Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4449" uid="40000062-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4209" uid="8000000a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Co Intm No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Order Date" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders Dates&quot;" parentId="4008:373" parentUid="80cb6a90-0fa8-0000-714b-e31d00000000" id="4010:445" uid="80cb6d1b-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Returns the Oder Date value from the Revenue Facts table. This field is of type Date.]]></Description>
 <RefLogicalColumn id="2006:236" uid="80cb6880-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order Date&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Co Intm Type" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4450" uid="40000063-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4210" uid="8000000b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Co Intm Type&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Contact Pers" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4451" uid="40000064-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4211" uid="8000000c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Contact Pers&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Corp Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4452" uid="40000065-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4212" uid="8000000d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Corp Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cp No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4453" uid="40000066-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4213" uid="8000000e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cp No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4454" uid="40000067-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4214" uid="8000000f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cpi Branch Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4455" uid="40000068-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4215" uid="80000010-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cpi Rec No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Designation" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4456" uid="40000069-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4216" uid="80000011-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Designation&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Eff Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4457" uid="4000006a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4217" uid="80000012-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Eff Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Email Add" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4458" uid="4000006b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4218" uid="80000013-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Email Add&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Expiry Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4459" uid="4000006c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4219" uid="80000014-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Expiry Date&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Order Month" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders Dates&quot;" parentId="4008:373" parentUid="80cb6a90-0fa8-0000-714b-e31d00000000" id="4010:446" uid="80cb6d1c-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Extracts the month out of the the Oder Date value from the Revenue Facts table. This information is extracted by BIEE server.]]></Description>
 <RefLogicalColumn id="2006:237" uid="80cb6881-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Order Month&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Fax No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4460" uid="4000006d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4220" uid="80000015-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Fax No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Globe No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4461" uid="4000006e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4221" uid="80000016-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Globe No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Home Add" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4462" uid="4000006f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4222" uid="80000017-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Home Add&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Input Vat Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4463" uid="40000070-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4223" uid="80000018-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Input Vat Rate&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Intm Name" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4464" uid="40000071-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4224" uid="80000019-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4465" uid="40000072-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4225" uid="8000001a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Intm Type" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4466" uid="40000073-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4226" uid="8000001b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm Type&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Iss Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4467" uid="40000074-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4227" uid="8000001c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Iss Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4468" uid="40000075-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4228" uid="8000001d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Last Update&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Lf Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4469" uid="40000076-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4229" uid="8000001e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Lf Tag&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Billed Date" parentName="&quot;Sample Sales Lite&quot;..&quot;Orders Dates&quot;" parentId="4008:373" parentUid="80cb6a90-0fa8-0000-714b-e31d00000000" id="4010:447" uid="80cb6d1d-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16140,6 +16372,38 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:240" uid="80cb6884-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D3 Orders (Facts Attributes)&quot;.&quot;Billed Month&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Time Code" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4480" uid="40000081-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4260" uid="8000003c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Time Code&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Week No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4481" uid="40000082-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4261" uid="8000003d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Week No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Year No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4482" uid="40000083-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4262" uid="8000003e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Year No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Calendar Date" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4483" uid="40000084-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4255" uid="80000037-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Calendar Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Date Of Month" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4484" uid="40000085-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4256" uid="80000038-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Date Of Month&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Month Name" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4485" uid="40000086-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4257" uid="80000039-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Month Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Month No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4486" uid="40000087-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4258" uid="8000003a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Month No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Quarter No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4487" uid="40000088-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4259" uid="8000003b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Quarter No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Base Facts&quot;" parentId="4008:364" parentUid="80cb6aa0-0fa8-0000-714b-e31d00000000" id="4010:449" uid="80cb6d1f-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Returns the Revenue from the Revenue Facts table with a Sum aggregation]]></Description>
 <RefLogicalColumn id="2006:246" uid="80cb6835-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Revenue&quot;"/>
@@ -16150,14 +16414,78 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:247" uid="80cb683b-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Billed Quantity&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Bank Acct Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4506" uid="4000009b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4267" uid="80000042-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Bank Acct Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Bank Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4507" uid="4000009c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4268" uid="80000043-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Bank Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cashier Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4508" uid="4000009d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4269" uid="80000044-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cashier Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4509" uid="4000009e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4270" uid="80000045-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cpi Branch Cd&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Discount Amount" parentName="&quot;Sample Sales Lite&quot;..&quot;Base Facts&quot;" parentId="4008:364" parentUid="80cb6aa0-0fa8-0000-714b-e31d00000000" id="4010:451" uid="80cb6cf8-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Returns the Discount Amount from the Revenue Facts table with a Sum aggregation]]></Description>
 <RefLogicalColumn id="2006:248" uid="80cb683d-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Discount Amount&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4510" uid="4000009f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4271" uid="80000046-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cpi Rec No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Dcb User Id" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4511" uid="400000a0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4272" uid="80000047-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Dcb User Id&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Dcb Users Key" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4512" uid="400000a1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4273" uid="80000048-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Dcb Users Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Effectivity Dt" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4513" uid="400000a2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4274" uid="80000049-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Effectivity Dt&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Expiry Dt" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4514" uid="400000a3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4275" uid="8000004a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Expiry Dt&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Gibr Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4515" uid="400000a4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4276" uid="8000004b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Gibr Branch Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Gibr Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4516" uid="400000a5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4277" uid="8000004c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Gibr Fund Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4517" uid="400000a6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4278" uid="8000004d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Last Update&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Print Name" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4518" uid="400000a7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4279" uid="8000004e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Print Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4519" uid="400000a8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4280" uid="8000004f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Remarks&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Target Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Base Facts&quot;" parentId="4008:364" parentUid="80cb6aa0-0fa8-0000-714b-e31d00000000" id="4010:452" uid="80cb6cf9-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Returns the Target Revenue from the Target Facts table, with a Sum aggregation]]></Description>
 <RefLogicalColumn id="2006:252" uid="80cb68a4-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F1 Targets Base Measures&quot;.&quot;Target Revenue&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4520" uid="400000a9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4281" uid="80000050-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;User Id&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Valid Tag" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4521" uid="400000aa-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4282" uid="80000051-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Valid Tag&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Target Quantity" parentName="&quot;Sample Sales Lite&quot;..&quot;Base Facts&quot;" parentId="4008:364" parentUid="80cb6aa0-0fa8-0000-714b-e31d00000000" id="4010:453" uid="80cb6cfa-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16175,9 +16503,53 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:250" uid="80cb6841-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;# of Orders&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4559" uid="400000d0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2507" uid="00000024-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;User Id&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="# of Products with Orders" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:456" uid="80cb6cfd-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[This metric counts the distinct number of Products in the query population. The aggregation is a Count Distinct aggregation]]></Description>
 <RefLogicalColumn id="2006:251" uid="80cb6842-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;# of Products with Orders&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Ae Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4560" uid="400000d1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2473" uid="00000002-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Ae Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Closing Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4561" uid="400000d2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2474" uid="00000003-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Closing Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4562" uid="400000d3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2475" uid="00000004-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Cpi Branch Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4563" uid="400000d4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2476" uid="00000005-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Cpi Rec No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Create By" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4564" uid="400000d5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2477" uid="00000006-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Create By&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Gfun Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4565" uid="400000d6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2478" uid="00000007-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Gfun Fund Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Gibr Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4566" uid="400000d7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2479" uid="00000008-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Gibr Branch Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4567" uid="400000d8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2480" uid="00000009-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Id&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4568" uid="400000d9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2481" uid="0000000a-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Pref" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4569" uid="400000da-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2482" uid="0000000b-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Pref&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Actual Unit Price" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:457" uid="80cb6cff-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16185,9 +16557,89 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:254" uid="80cb68aa-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Actual Unit Price&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Jv Pref Suff" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4570" uid="400000db-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2483" uid="0000000c-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Pref Suff&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Seq No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4571" uid="400000dc-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2484" uid="0000000d-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Seq No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Tran Mm" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4572" uid="400000dd-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2485" uid="0000000e-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Mm&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Tran Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4573" uid="400000de-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2486" uid="0000000f-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Tran Type" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4574" uid="400000df-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2487" uid="00000010-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Type&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Jv Tran Yy" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4575" uid="400000e0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2488" uid="00000011-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Yy&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4576" uid="400000e1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2489" uid="00000012-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Last Update&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Particulars" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4577" uid="400000e2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2490" uid="00000013-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Particulars&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Posting Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4578" uid="400000e3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2491" uid="00000014-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Posting Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Ref Jv No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4579" uid="400000e4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2492" uid="00000015-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Ref Jv No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Avg Order Size" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:458" uid="80cb6d01-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[This logical object calculates the Actual Average Oder Size by dividing Total Revenue by number of Distinct Orders.]]></Description>
 <RefLogicalColumn id="2006:258" uid="80cb68ae-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Avg Order Size&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4580" uid="400000e5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2493" uid="00000016-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Remarks&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Sap Inc Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4581" uid="400000e6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2494" uid="00000017-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Sap Inc Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Sap Upload Stat" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4582" uid="400000e7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2495" uid="00000018-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Sap Upload Stat&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tb Exclude Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4583" uid="400000e8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2496" uid="00000019-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tb Exclude Tag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Class" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4584" uid="400000e9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2497" uid="0000001a-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Class&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Class No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4585" uid="400000ea-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2498" uid="0000001b-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Class No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4586" uid="400000eb-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2499" uid="0000001c-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Flag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4587" uid="400000ec-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2500" uid="0000001d-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Flag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4588" uid="400000ed-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2501" uid="0000001e-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Id&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Key" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4589" uid="400000ee-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2502" uid="0000001f-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Key&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Full Month Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:459" uid="80cb6d03-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16195,9 +16647,49 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:278" uid="80cb6865-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Full Month Revenue&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Tran Month" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4590" uid="400000ef-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2503" uid="00000020-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Month&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Seq No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4591" uid="400000f0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2504" uid="00000021-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Seq No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Tran Year" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4592" uid="400000f1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2505" uid="00000022-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Year&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Upload Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4593" uid="400000f2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:2506" uid="00000023-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Upload Tag&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Full Quarter Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:460" uid="80cb6d05-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Shows the full quarter sum of revenue.]]></Description>
 <RefLogicalColumn id="2006:279" uid="80cb6868-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Full Quarter Revenue&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Branch Key" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4602" uid="400000fb-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3427" uid="00000092-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Branch Name" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4603" uid="400000fc-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3428" uid="00000093-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4604" uid="400000fd-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3429" uid="00000094-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Fund Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Fund Name" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4605" uid="400000fe-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3430" uid="00000095-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Fund Name&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Acct Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4606" uid="400000ff-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3425" uid="00000090-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Acct Branch Cd&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4607" uid="40000100-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:3426" uid="00000091-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Cd&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="All Offices Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Calculated Facts&quot;" parentId="4008:375" parentUid="80cb6aa9-0fa8-0000-714b-e31d00000000" id="4010:461" uid="80cb6d07-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16210,9 +16702,65 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <RefLogicalColumn id="2006:218" uid="80cb6870-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;All Products Revenue&quot;"/>
 </PresentationColumn>
 
+<PresentationColumn name="Tran Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4624" uid="40000111-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4310" uid="8000006b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Tran Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Address" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4625" uid="40000112-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4297" uid="8000005e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Address&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Agent Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4626" uid="40000113-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4298" uid="8000005f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Agent Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Branch Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4627" uid="40000114-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4299" uid="80000060-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Branch Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cancel Date" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4628" uid="40000115-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4300" uid="80000061-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Cancel Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Cancel Dcb No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4629" uid="40000116-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4301" uid="80000062-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Cancel Dcb No&quot;"/>
+</PresentationColumn>
+
 <PresentationColumn name="Period Ago Revenue" parentName="&quot;Sample Sales Lite&quot;..&quot;Time Series&quot;" parentId="4008:379" parentUid="80cb6ab1-0fa8-0000-714b-e31d00000000" id="4010:463" uid="80cb6d0b-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Shows the period Ago Revenue. This calculation is dependent on the time grain that is set in the query by the user. If day object is in the query, then this metric will return Day Ago, if month then month ago...]]></Description>
 <RefLogicalColumn id="2006:257" uid="80cb684c-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;F0 Revenue Base Measures&quot;.&quot;Period Ago Revenue&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Dcb No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4630" uid="40000117-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4302" uid="80000063-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Dcb No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Dcb Users Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4631" uid="40000118-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4303" uid="80000064-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Dcb Users Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Or Date" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4632" uid="40000119-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4304" uid="80000065-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Date&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Or Flag" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4633" uid="4000011a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4305" uid="80000066-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Flag&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Or Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4634" uid="4000011b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4306" uid="80000067-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Key&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Or No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4635" uid="4000011c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4307" uid="80000068-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or No&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Particulars" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4636" uid="4000011d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4308" uid="80000069-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Particulars&quot;"/>
+</PresentationColumn>
+
+<PresentationColumn name="Payor" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4637" uid="4000011e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
+<RefLogicalColumn id="2006:4309" uid="8000006a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Payor&quot;"/>
 </PresentationColumn>
 
 <PresentationColumn name="Revenue Variation to Last Period" parentName="&quot;Sample Sales Lite&quot;..&quot;Time Series&quot;" parentId="4008:379" parentUid="80cb6ab1-0fa8-0000-714b-e31d00000000" id="4010:464" uid="80cb6d0d-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
@@ -16290,554 +16838,6 @@ Stores the date information in the format MM/DD/YYYY.  Eg :- 11/12/2006]]></Desc
 <PresentationColumn name="Day Of Month" parentName="&quot;Sample Targets Lite&quot;..&quot;More Time Objects&quot;" parentId="4008:370" parentUid="80cb6c14-0fa8-0000-714b-e31d00000000" id="4010:478" uid="80cb6d69-0faa-0000-714b-e31d00000000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
 <Description><![CDATA[Day of Month is an integer and a value between 1 and 31.]]></Description>
 <RefLogicalColumn id="2006:234" uid="80cb681d-07d6-0000-714b-e31d00000000" qualifiedName="&quot;SampleApp Lite&quot;.&quot;D0 Time&quot;.&quot;Day Of Month&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Quarter No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4360" uid="40000009-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3378" uid="00000063-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Quarter No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Time Code" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4361" uid="4000000a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3379" uid="00000064-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Time Code&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Week No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4362" uid="4000000b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3380" uid="00000065-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Week No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Year No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4363" uid="4000000c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3381" uid="00000066-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Year No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Calendar Date" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4364" uid="4000000d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3374" uid="0000005f-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Calendar Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Date Of Month" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4365" uid="4000000e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3375" uid="00000060-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Date Of Month&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Month Name" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4366" uid="4000000f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3376" uid="00000061-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Month Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Month No" parentName="&quot;Official Receipt&quot;..&quot;D16 Cancel Date&quot;" parentId="4008:4368" parentUid="40000011-4995-1630-8029-c0a801020000" id="4010:4367" uid="40000010-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3377" uid="00000062-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D16 Cancel Date&quot;.&quot;Month No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Lic Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4420" uid="40000045-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4230" uid="8000001f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Lic Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Mail Addr1" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4421" uid="40000046-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4231" uid="80000020-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr1&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Mail Addr2" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4422" uid="40000047-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4232" uid="80000021-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr2&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Mail Addr3" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4423" uid="40000048-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4233" uid="80000022-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Mail Addr3&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Master Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4424" uid="40000049-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4234" uid="80000023-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Master Intm No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Nickname" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4425" uid="4000004a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4235" uid="80000024-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Nickname&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Old Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4426" uid="4000004b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4236" uid="80000025-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Old Intm No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Parent Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4427" uid="4000004c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4237" uid="80000026-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Parent Intm No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Payt Terms" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4428" uid="4000004d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4238" uid="80000027-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Payt Terms&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Phone No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4429" uid="4000004e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4239" uid="80000028-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Phone No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Pin Code" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4430" uid="4000004f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4240" uid="80000029-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Pin Code&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Prnt Intm Tin Sw" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4431" uid="40000050-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4241" uid="8000002a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Prnt Intm Tin Sw&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Ref Intm Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4432" uid="40000051-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4242" uid="8000002b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ref Intm Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4433" uid="40000052-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4243" uid="8000002c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Remarks&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Smart No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4434" uid="40000053-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4244" uid="8000002d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Smart No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Special Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4435" uid="40000054-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4245" uid="8000002e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Special Rate&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Sun No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4436" uid="40000055-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4246" uid="8000002f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Sun No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tin" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4437" uid="40000056-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4247" uid="80000030-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Tin&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4438" uid="40000057-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4248" uid="80000031-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;User Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Whtax Id" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4439" uid="40000058-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4249" uid="80000032-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Whtax Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Wtax Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4440" uid="40000059-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4250" uid="80000033-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Wtax Rate&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Active Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4441" uid="4000005a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4201" uid="80000002-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Active Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Agent Key" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4442" uid="4000005b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4202" uid="80000003-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Agent Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Bill Addr1" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4443" uid="4000005c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4203" uid="80000004-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr1&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Bill Addr2" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4444" uid="4000005d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4204" uid="80000005-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr2&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Bill Addr3" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4445" uid="4000005e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4205" uid="80000006-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Bill Addr3&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Birthdate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4446" uid="4000005f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4206" uid="80000007-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Birthdate&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Ca Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4447" uid="40000060-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4207" uid="80000008-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ca Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Ca No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4448" uid="40000061-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4208" uid="80000009-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Ca No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Co Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4449" uid="40000062-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4209" uid="8000000a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Co Intm No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Co Intm Type" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4450" uid="40000063-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4210" uid="8000000b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Co Intm Type&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Contact Pers" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4451" uid="40000064-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4211" uid="8000000c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Contact Pers&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Corp Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4452" uid="40000065-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4212" uid="8000000d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Corp Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cp No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4453" uid="40000066-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4213" uid="8000000e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cp No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4454" uid="40000067-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4214" uid="8000000f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cpi Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4455" uid="40000068-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4215" uid="80000010-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Cpi Rec No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Designation" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4456" uid="40000069-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4216" uid="80000011-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Designation&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Eff Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4457" uid="4000006a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4217" uid="80000012-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Eff Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Email Add" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4458" uid="4000006b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4218" uid="80000013-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Email Add&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Expiry Date" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4459" uid="4000006c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4219" uid="80000014-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Expiry Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Fax No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4460" uid="4000006d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4220" uid="80000015-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Fax No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Globe No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4461" uid="4000006e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4221" uid="80000016-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Globe No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Home Add" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4462" uid="4000006f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4222" uid="80000017-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Home Add&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Input Vat Rate" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4463" uid="40000070-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4223" uid="80000018-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Input Vat Rate&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Intm Name" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4464" uid="40000071-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4224" uid="80000019-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Intm No" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4465" uid="40000072-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4225" uid="8000001a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Intm Type" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4466" uid="40000073-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4226" uid="8000001b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Intm Type&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Iss Cd" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4467" uid="40000074-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4227" uid="8000001c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Iss Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4468" uid="40000075-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4228" uid="8000001d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Last Update&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Lf Tag" parentName="&quot;Official Receipt&quot;..&quot;D17 Agent Dim&quot;" parentId="4008:4470" parentUid="40000077-4995-1630-8029-c0a801020000" id="4010:4469" uid="40000076-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4229" uid="8000001e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D17 Agent Dim&quot;.&quot;Lf Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Time Code" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4480" uid="40000081-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4260" uid="8000003c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Time Code&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Week No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4481" uid="40000082-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4261" uid="8000003d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Week No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Year No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4482" uid="40000083-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4262" uid="8000003e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Year No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Calendar Date" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4483" uid="40000084-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4255" uid="80000037-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Calendar Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Date Of Month" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4484" uid="40000085-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4256" uid="80000038-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Date Of Month&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Month Name" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4485" uid="40000086-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4257" uid="80000039-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Month Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Month No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4486" uid="40000087-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4258" uid="8000003a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Month No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Quarter No" parentName="&quot;Official Receipt&quot;..&quot;D18 OR Date&quot;" parentId="4008:4488" parentUid="40000089-4995-1630-8029-c0a801020000" id="4010:4487" uid="40000088-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4259" uid="8000003b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D18 OR Date&quot;.&quot;Quarter No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Bank Acct Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4506" uid="4000009b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4267" uid="80000042-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Bank Acct Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Bank Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4507" uid="4000009c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4268" uid="80000043-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Bank Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cashier Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4508" uid="4000009d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4269" uid="80000044-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cashier Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4509" uid="4000009e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4270" uid="80000045-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cpi Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4510" uid="4000009f-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4271" uid="80000046-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Cpi Rec No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Dcb User Id" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4511" uid="400000a0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4272" uid="80000047-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Dcb User Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Dcb Users Key" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4512" uid="400000a1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4273" uid="80000048-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Dcb Users Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Effectivity Dt" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4513" uid="400000a2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4274" uid="80000049-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Effectivity Dt&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Expiry Dt" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4514" uid="400000a3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4275" uid="8000004a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Expiry Dt&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Gibr Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4515" uid="400000a4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4276" uid="8000004b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Gibr Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Gibr Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4516" uid="400000a5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4277" uid="8000004c-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Gibr Fund Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4517" uid="400000a6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4278" uid="8000004d-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Last Update&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Print Name" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4518" uid="400000a7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4279" uid="8000004e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Print Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4519" uid="400000a8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4280" uid="8000004f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Remarks&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4520" uid="400000a9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4281" uid="80000050-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;User Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Valid Tag" parentName="&quot;Official Receipt&quot;..&quot;D19 DCB Users Dim&quot;" parentId="4008:4522" parentUid="400000ab-4995-1630-8029-c0a801020000" id="4010:4521" uid="400000aa-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4282" uid="80000051-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D19 DCB Users Dim&quot;.&quot;Valid Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="User Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4559" uid="400000d0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2507" uid="00000024-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;User Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Ae Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4560" uid="400000d1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2473" uid="00000002-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Ae Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Closing Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4561" uid="400000d2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2474" uid="00000003-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Closing Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4562" uid="400000d3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2475" uid="00000004-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Cpi Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cpi Rec No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4563" uid="400000d4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2476" uid="00000005-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Cpi Rec No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Create By" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4564" uid="400000d5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2477" uid="00000006-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Create By&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Gfun Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4565" uid="400000d6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2478" uid="00000007-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Gfun Fund Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Gibr Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4566" uid="400000d7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2479" uid="00000008-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Gibr Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4567" uid="400000d8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2480" uid="00000009-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4568" uid="400000d9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2481" uid="0000000a-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Pref" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4569" uid="400000da-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2482" uid="0000000b-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Pref&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Pref Suff" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4570" uid="400000db-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2483" uid="0000000c-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Pref Suff&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Seq No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4571" uid="400000dc-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2484" uid="0000000d-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Seq No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Tran Mm" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4572" uid="400000dd-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2485" uid="0000000e-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Mm&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Tran Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4573" uid="400000de-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2486" uid="0000000f-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Tran Type" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4574" uid="400000df-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2487" uid="00000010-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Type&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Jv Tran Yy" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4575" uid="400000e0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2488" uid="00000011-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Jv Tran Yy&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Last Update" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4576" uid="400000e1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2489" uid="00000012-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Last Update&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Particulars" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4577" uid="400000e2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2490" uid="00000013-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Particulars&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Posting Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4578" uid="400000e3-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2491" uid="00000014-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Posting Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Ref Jv No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4579" uid="400000e4-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2492" uid="00000015-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Ref Jv No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Remarks" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4580" uid="400000e5-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2493" uid="00000016-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Remarks&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Sap Inc Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4581" uid="400000e6-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2494" uid="00000017-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Sap Inc Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Sap Upload Stat" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4582" uid="400000e7-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2495" uid="00000018-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Sap Upload Stat&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tb Exclude Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4583" uid="400000e8-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2496" uid="00000019-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tb Exclude Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Class" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4584" uid="400000e9-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2497" uid="0000001a-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Class&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Class No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4585" uid="400000ea-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2498" uid="0000001b-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Class No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Date" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4586" uid="400000eb-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2499" uid="0000001c-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Flag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4587" uid="400000ec-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2500" uid="0000001d-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Flag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Id" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4588" uid="400000ed-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2501" uid="0000001e-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Id&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Key" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4589" uid="400000ee-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2502" uid="0000001f-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Month" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4590" uid="400000ef-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2503" uid="00000020-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Month&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Seq No" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4591" uid="400000f0-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2504" uid="00000021-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Seq No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Year" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4592" uid="400000f1-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2505" uid="00000022-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Tran Year&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Upload Tag" parentName="&quot;Official Receipt&quot;..&quot;D3 Account Transactions&quot;" parentId="4008:4594" parentUid="400000f3-4995-1630-8029-c0a801020000" id="4010:4593" uid="400000f2-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:2506" uid="00000023-0eff-162b-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D3 Account Transactions&quot;.&quot;Upload Tag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Branch Key" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4602" uid="400000fb-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3427" uid="00000092-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Branch Name" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4603" uid="400000fc-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3428" uid="00000093-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Fund Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4604" uid="400000fd-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3429" uid="00000094-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Fund Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Fund Name" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4605" uid="400000fe-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3430" uid="00000095-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Fund Name&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Acct Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4606" uid="400000ff-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3425" uid="00000090-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Acct Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Branch Cd" parentName="&quot;Official Receipt&quot;..&quot;D7 Acct Branch Dim&quot;" parentId="4008:4608" parentUid="40000101-4995-1630-8029-c0a801020000" id="4010:4607" uid="40000100-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:3426" uid="00000091-e4aa-162f-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;D7 Acct Branch Dim&quot;.&quot;Branch Cd&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Tran Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4624" uid="40000111-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4310" uid="8000006b-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Tran Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Address" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4625" uid="40000112-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4297" uid="8000005e-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Address&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Agent Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4626" uid="40000113-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4298" uid="8000005f-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Agent Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Branch Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4627" uid="40000114-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4299" uid="80000060-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Branch Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cancel Date" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4628" uid="40000115-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4300" uid="80000061-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Cancel Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Cancel Dcb No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4629" uid="40000116-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4301" uid="80000062-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Cancel Dcb No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Dcb No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4630" uid="40000117-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4302" uid="80000063-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Dcb No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Dcb Users Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4631" uid="40000118-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4303" uid="80000064-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Dcb Users Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Or Date" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4632" uid="40000119-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4304" uid="80000065-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Date&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Or Flag" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4633" uid="4000011a-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4305" uid="80000066-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Flag&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Or Key" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4634" uid="4000011b-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4306" uid="80000067-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or Key&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Or No" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4635" uid="4000011c-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4307" uid="80000068-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Or No&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Particulars" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4636" uid="4000011d-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4308" uid="80000069-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Particulars&quot;"/>
-</PresentationColumn>
-
-<PresentationColumn name="Payor" parentName="&quot;Official Receipt&quot;..&quot;F3 OR Fact&quot;" parentId="4008:4638" parentUid="4000011f-4995-1630-8029-c0a801020000" id="4010:4637" uid="4000011e-4995-1630-8029-c0a801020000" hasDispName="false" hasDispDescription="false" overrideLogicalName="false">
-<RefLogicalColumn id="2006:4309" uid="8000006a-492b-1630-8029-c0a801020000" qualifiedName="&quot;BI Application&quot;.&quot;F3 OR Fact&quot;.&quot;Payor&quot;"/>
 </PresentationColumn>
 
 <PresentationHierarchy name="H1 PostingTimeDim" parentName="&quot;Accounting&quot;..&quot;D1 Posting Date&quot;" parentId="4008:2187" parentUid="80000011-5687-1629-8029-c0a801020000" id="4028:2328" uid="c0000000-5b06-1629-8029-c0a801020000" hasDispName="false" hasDispDescription="false">
