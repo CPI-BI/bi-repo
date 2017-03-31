@@ -1,0 +1,29 @@
+RPD (RPD password: Oracle123)
+
+cd RPD_backup
+C:\Oracle\Middleware\OBIEE_12c\user_projects\domains\DEMO\bitools\bin\data-model-cmd.cmd downloadrpd -O Mar23.rpd -SI ssi -U weblogic -P Oracle123
+------------------------------------------
+BAR files
+
+Domain home : C:\Oracle\Middleware\OBIEE_12c\user_projects\domains\DEMO
+Service Instance Key : ssi
+Working Directory : C:\backup\work
+Export Directory : C:\backup\export
+
+call wlst.cmd
+C:\Oracle\Middleware\OBIEE_12c\oracle_common\common\bin\wlst.cmd
+
+(use double slash for windows)
+exportServiceInstance('C:\\Oracle\\Middleware\\OBIEE_12c\\user_projects\\domains\\DEMO','ssi','C:\\backup\\work','C:\\backup\\export')
+-----------------------------------------
+
+
+bitools 
+*start
+C:\Oracle\Middleware\OBIEE_12c\user_projects\domains\DEMO\bitools\bin\start.cmd
+
+*stop
+C:\Oracle\Middleware\OBIEE_12c\user_projects\domains\DEMO\bitools\bin\stop.cmd
+
+-----
+C:\Oracle\Middleware\OBIEE_12c\oracle_common\common\bin
